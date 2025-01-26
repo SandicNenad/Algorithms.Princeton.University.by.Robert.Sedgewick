@@ -3,8 +3,8 @@ using Algorithms_Princeton_University_by_Robert_Sedgewick.MyDataStructure;
 
 Console.WriteLine("Hello, World!");
 
-//new UnionFind(9);
+var unionFind = new UnionFind(9);
 
-UnionFind.ShowArray();
+unionFind.ShowArray();
 
 Console.ReadLine();
