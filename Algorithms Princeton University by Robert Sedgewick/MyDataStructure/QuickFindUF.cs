@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Algorithms_Princeton_University_by_Robert_Sedgewick.MyDataStructure
 {
-    public class UnionFind
+    public class QuickFindUF
     {
         private readonly int _n;
         private int[] _unionFindArray;
-        public UnionFind()
+        public QuickFindUF()
         {
             _n = 0;
             _unionFindArray = [];
         }
-        public UnionFind( int n)
+        public QuickFindUF( int n)
         {
             _n = n;
             _unionFindArray = new int[n];

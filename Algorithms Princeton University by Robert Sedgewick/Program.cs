@@ -3,7 +3,7 @@ using Algorithms_Princeton_University_by_Robert_Sedgewick.MyDataStructure;
 
 Console.WriteLine("Hello, World!");
 
-var unionFind = new UnionFind(9);
+var unionFind = new QuickFindUF(10);
 
 unionFind.ShowArray();
 
