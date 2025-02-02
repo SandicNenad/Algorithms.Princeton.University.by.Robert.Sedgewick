@@ -10,39 +10,41 @@ namespace Algorithms_Princeton_University_by_Robert_Sedgewick.MyDataStructure
     public class QuickFindUF
     {
         private readonly int _n;
-        private int[] _unionFindArray;
+        private int[] _quickFindUFArray;
+
         public QuickFindUF()
         {
             _n = 0;
-            _unionFindArray = [];
+            _quickFindUFArray = [];
         }
+
         public QuickFindUF( int n)
         {
             _n = n;
-            _unionFindArray = new int[n];
-            for (int i = 0; i < _unionFindArray.Length; i++)
+            _quickFindUFArray = new int[n];
+            for (int i = 0; i < _quickFindUFArray.Length; i++)
             {
-                _unionFindArray[i] = i;
+                _quickFindUFArray[i] = i;
             }
         }
 
         public bool IsConnected(int p, int q)
         {
-            if (_unionFindArray is null)
+            if (_quickFindUFArray is null)
                 return false;
 
-            return _unionFindArray[p] == _unionFindArray[q];
+            return _quickFindUFArray[p] == _quickFindUFArray[q];
         }
 
         public void Union(int p, int q)
         {
-            int elementPid = _unionFindArray[p];
-            int elementQid = _unionFindArray[q];
+            int elementPid = _quickFindUFArray[p];
+            int elementQid = _quickFindUFArray[q];
 
-            for (int i = 0; i< _unionFindArray.Length; i++)
+            for (int i = 0; i< _quickFindUFArray.Length; i++)
             {
-                if ( _unionFindArray [i] == elementPid)
-                    _unionFindArray[i] = elementQid;
+                if ( _quickFindUFArray [i] == elementPid)
+                    _quickFindUFArray[i] = elementQid;
             }
         }
 
@@ -50,12 +52,12 @@ namespace Algorithms_Princeton_University_by_Robert_Sedgewick.MyDataStructure
         {
             string emptyArray = "Union Find array not created, array is empty!";
             string notEmptyArray = "Elements of our Union Find class are:";
-            string initialMessage = _unionFindArray == null ? notEmptyArray : emptyArray;
+            string initialMessage = _quickFindUFArray == null ? notEmptyArray : emptyArray;
             Console.WriteLine(initialMessage);
 
-            for (int i = 0;i < _unionFindArray?.Length;i++)
+            for (int i = 0;i < _quickFindUFArray?.Length;i++)
             {
-                Console.WriteLine(_unionFindArray[i]);
+                Console.WriteLine(_quickFindUFArray[i]);
             }
         }
     }
