@@ -19,7 +19,8 @@
         private int root(int i)
         {
             while (i != _quickUnionUFArray[i])
-            {                
+            {
+                _quickUnionUFArray[i] = _quickUnionUFArray[_quickUnionUFArray[i]];
                 i = _quickUnionUFArray[i];
             }   
 
